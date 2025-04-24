@@ -43,6 +43,7 @@ html {
 
 body {
     background-color: #fff;
+    border-bottom: .75rem solid var(--cpar-secondary);
     color: var(--cpar-content);
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.5rem;
@@ -73,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
     overflow-wrap: break-word; }
 
-h1 { font-size: 3.5rem; color: var(--cpar-tertiary); }
+h1 { font-size: 3.5rem; color: var(--cpar-tertiary); font-weight: 800; }
 
 h2 { font-size: 2.5rem; margin: 2.75rem 0 2rem; }
 
@@ -185,4 +186,24 @@ ul { display: block; padding: 0; max-width: 100%; }
 
 /* -- MOBILE STYLING -- */
 
-    @media screen and ( max-width: 782px ) {}
+    @media screen and ( max-width: 999px ) {
+
+        [data-cpar-region="main"] { grid-template-columns: minmax(0, 250px) 1fr; }
+    
+    }
+
+    @media screen and ( max-width: 767px ) {
+
+        [data-cpar-region="main"] { grid-template-columns: minmax(0, 200px) 1fr; }
+
+        [data-cpar-region="header"] { text-align: center !important; }
+
+    }
+
+    @media screen and ( max-width: 650px ) {
+
+        [data-cpar-region="main"] { grid-template-columns: 1fr; }
+
+        [data-cpar-region="main"] .main-strip { border-radius: 2.5rem; }
+
+    }
