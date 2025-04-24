@@ -45,7 +45,7 @@ body {
     background-color: #fff;
     color: var(--cpar-content);
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-optical-sizing: auto;
     font-weight: 350;
     min-height: 100dvh;
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 3.5rem; color: var(--cpar-tertiary); }
 
-h2 { font-size: 3rem; }
+h2 { font-size: 2.5rem; margin: 2.75rem 0 2rem; }
 
 h3 { font-size: 2.5rem; }
 
@@ -110,41 +110,31 @@ ul { display: block; padding: 0; max-width: 100%; }
     ul > ol { list-style-type: none; }
 
 
-/* -- CPAR DESIGN -- */
+/* -- STYLING -- */
 
 [data-cpar-layout="body"] {
-    background-size: cover;
-    background-position: center center;
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr;
     z-index: 0;
     width: 100%; max-width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; }
 
     [data-cpar-region="header"] {
-        display: grid;
-        grid-template-columns: 1fr auto;
+        text-align: right;
         padding: 2.75rem var(--cpar-section) 0; }
 
         [data-cpar-region="header"] .header-title {}
-
-        [data-cpar-region="header"] .header-cta {}
-
-        [data-cpar-region="header"] .header-cta a:link,
-        [data-cpar-region="header"] .header-cta a:visited,
-        [data-cpar-region="header"] .header-cta a:active {
-            background-color: var(--cpar-action);
-            color: #fff;
-            padding: 1rem 1.5rem;
-            border-radius: 1.5rem;
-            line-height: 4.7rem; }
 
     [data-cpar-region="main"] {
         display: grid;
         grid-template-columns: minmax(0, 300px) 1fr;
         column-gap: 5rem;
-        padding: 7.5rem var(--cpar-section) 0; }
+        padding: 3.5rem var(--cpar-section) 0; }
 
         [data-cpar-region="main"] .main-strip {
             background-color: var(--cpar-secondary);
@@ -157,13 +147,42 @@ ul { display: block; padding: 0; max-width: 100%; }
                 max-width: 100%;
                 border-radius: 2.5rem; }
 
-        [data-cpar-region="main"] .main-body { padding-top: 2.75rem; }
+            [data-cpar-region="main"] .link-button {
+                    display: block;
+                    margin-top: 1.75rem;
+                    background-color: #000;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    font-weight: 475;
+                    text-align: center;
+                    border-radius: 1.25rem;
+                    padding: 1rem 1.5rem; }
 
-            [data-cpar-region="main"] .main-body p { font-weight: 500; }
+        [data-cpar-region="main"] .main-body {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            padding-top: 2.75rem; }
 
+            [data-cpar-region="main"] .main-body p { font-weight: 425; }
 
-/* -- CUSTOM STYLING -- */
+            [data-cpar-region="main"] .wallet-address {
+                color: var(--cpar-action);
+                font-family: 'Space Mono', monospace;
+                font-weight: 550; }
+        
+                [data-cpar-region="main"] .wallet-address:hover { cursor: pointer; }
+        
+            [data-cpar-region="main"] .wallet-type {
+                display: block;
+                margin-top: .5rem;
+                font-size: 1.5rem;
+                font-style: italic; }
+        
+            [data-cpar-region="main"] .wallet-item:not(:last-child) { margin-bottom: 1.75rem; }
+
+            [data-cpar-region="main"] .body-disclaimer { font-size: 1.15rem; padding: 2.75rem 0 1.5rem; line-height: 1.5; }
 
 
 /* -- MOBILE STYLING -- */
-@media screen and ( max-width: 782px ) {}
+
+    @media screen and ( max-width: 782px ) {}

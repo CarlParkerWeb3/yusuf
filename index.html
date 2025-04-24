@@ -10,7 +10,7 @@
 
         <title>Yusuf Memorial Fund Website</title>
 
-        <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        <meta name="description" content="In memory of Yusuf — a crowdfunding page created to honor his legacy and support his loved ones.">
 
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://carlparkerweb3.github.io/yusuf/">
@@ -21,7 +21,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" id="cpar-styles" href="assets/css/style.css" media="all" />
 
@@ -37,12 +37,6 @@
 
             </div>
 
-            <div class="header-cta">
-                
-                <a href="https://x.com/ysfcy" target="_blank">X Profile</a>
-            
-            </div>
-
         </header>
 
         <main data-cpar-region="main">
@@ -51,15 +45,74 @@
 
                 <img src="assets/images/yusuf-pfp.jpg" />
 
+                <a class="link-button twitter" href="https://x.com/ysfcy" target="_blank">Twitter Profile</a>
+
             </div>
 
             <div class="main-body">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="body-info">
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <h2>Wallet Options:</h2>
+
+                    <ul class="body-wallets">
+
+                        <li class="wallet-item">
+
+                            <span class="wallet-address">k:XXXXXXXXXXXXXXXXXXXXX</span>
+
+                            <br />
+
+                            <span class="wallet-type">Kadena Wallet</span>
+
+                        </li>
+
+                        <li class="wallet-item">
+
+                            <span class="wallet-address">0xXXXXXXXXXXXXXXXXXXXXX</span>
+
+                            <br />
+
+                            <span class="wallet-type">Ethereum Wallet</span>
+
+                        </li>
+
+                        <li class="wallet-item">
+
+                            <span class="wallet-address">XXXXXXXXXXXXXXXXXXXXXXX</span>
+
+                            <br />
+
+                            <span class="wallet-type">Alephium Wallet</span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="body-disclaimer">DISCLAIMER -- This memorial crowdfunding page is not affiliated with, sponsored by, or officially associated with any company, foundation, or crypto ecosystem project. It is an independent initiative organized by members of the crypto community who wish to express support and provide assistance to the family of Yusuf during this difficult time. All contributions are voluntary and made in the spirit of compassion and solidarity.</div>
 
             </div>
 
         </main>
+
+        <script>
+            document.querySelectorAll('.wallet-address').forEach(span => {
+              span.addEventListener('click', () => {
+                const text = span.innerText;
+                navigator.clipboard.writeText(text).then(() => {
+                  alert(`Copied: ${text}`);
+                }).catch(err => {
+                  console.error("Failed to copy: ", err);
+                });
+              });
+            });
+          </script>
 
     </body>
 
